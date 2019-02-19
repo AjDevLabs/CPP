@@ -1,0 +1,53 @@
+File Handling using File Streams
+
+File represents storage medium for storing data or information. Streams refer to sequence of bytes. In Files we store data i.e. text or binary data permanently and use these data to read or write in the form of input output operations by transferring bytes of data. So we use the term File Streams/File handling. We use the header file <fstream>
+
+    ofstream: It represents output Stream and this is used for writing in files.
+    ifstream: It represents input Stream and this is used for reading from files.
+    fstream: It represents both output Stream and input Stream. So it can read from files and write to files.
+
+Operations in File Handling:
+
+    Creating a file: open()
+    Reading data: read()
+    Writing new data: write()
+    Closing a file: close()
+
+Creating/Opening a File
+
+We create/open a file by specifying new path of the file and mode of operation. Operations can be reading, writing, appending and truncating. Syntax for file creation: FilePointer.open("Path",ios::mode);
+
+    Example of file opened for writing: st.open("E:\studytonight.txt",ios::out);
+    Example of file opened for reading: st.open("E:\studytonight.txt",ios::in);
+    Example of file opened for appending: st.open("E:\studytonight.txt",ios::app);
+    Example of file opened for truncating: st.open("E:\studytonight.txt",ios::trunc);
+
+
+
+
+Special operations in a File
+
+There are few important functions to be used with file streams like:
+
+    tellp() - It tells the current position of the put pointer.
+
+    Syntax: filepointer.tellp()
+    tellg() - It tells the current position of the get pointer.
+
+    Syntax: filepointer.tellg()
+    seekp() - It moves the put pointer to mentioned location.
+
+    Syntax: filepointer.seekp(no of bytes,reference mode)
+    seekg() - It moves get pointer(input) to a specified location.
+
+    Syntax: filepointer.seekg((no of bytes,reference point)
+    put() - It writes a single character to file.
+    get() - It reads a single character from file.
+
+    Note: For seekp and seekg three reference points are passed:
+    ios::beg - beginning of the file
+    ios::cur - current position in the file
+    ios::end - end of the file
+
+
+    
